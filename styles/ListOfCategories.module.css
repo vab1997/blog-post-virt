@@ -1,0 +1,77 @@
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.divContainer {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 0;
+}
+
+.ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li {
+  line-height: 4px;
+  padding: 8px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.categoriaData {
+  font-size: 1.1rem;
+  line-height: 0.4rem;
+}
+
+.categoriaLabel {
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+.table {
+  margin-bottom: 0px;
+}
+
+.table > tbody > .tr > .td {
+  padding: 15px;
+  line-height: 25px;
+  letter-spacing: 0.6px;
+  border: 1px solid #e4e4e4;
+}
+
+.table .tr > .td {
+  padding: 11px 13px;
+}
+
+.tr:nth-child(1) > .td {
+  border-top:0px;
+}
+
+.tr > .td:nth-child(1){
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 13px;
+  color: #888888;
+  width: 140px;
+}
+
+.tr > .td:nth-child(2) {
+  font-weight: 400;
+}

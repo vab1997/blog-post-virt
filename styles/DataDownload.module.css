@@ -1,0 +1,23 @@
+
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+  padding: 12px 0 4px 0;
+}
+
+.download:hover {
+  color: #09f;
+}
+
+.downloadpdf {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img {
+  margin-left: 8px;
+}

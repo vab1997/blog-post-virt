@@ -1,0 +1,138 @@
+.profileContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 70vh;
+  padding: 5rem 0;
+}
+
+.profilePicture {
+  width: 30vw;
+}
+
+.profileBody {
+  width: 50vw;
+  padding: 1rem 100px 1rem 0;
+  display: block;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact div {
+  padding: 0 8px;
+}
+
+.greet {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 2rem;
+}
+.subtitle {
+  font-size: 1.5rem;
+}
+
+.title,
+.subtitle {
+  margin-bottom: 24px;
+  letter-spacing: -0.75px;
+  line-height: 1.2;
+}
+
+.personalData {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  margin: 0;
+}
+
+
+.dataLabel {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.wave {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 70% 70%;
+  font-size: 1.3em;
+  margin-left: 5px;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .profile {
+      padding: 1rem 0;
+  }
+  .profileContainer {
+      flex-direction: column;
+      height: auto;
+      padding: 2rem 0 0 0;
+  }
+
+  .profilePicture,
+  .profileBody {
+      width: 100%;
+  }
+
+  .profileBody {
+      padding: 0;
+  }
+
+  .profilePicture {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+  }
+
+  .title, .subtitle {
+      margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 414px) {
+  .profilePicture img {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 850px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
