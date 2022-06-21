@@ -6,7 +6,7 @@ import download from 'public/download.png'
 import openBook from 'public/open-book.webp'
 
 export default function DataDownload () {
-  const pdfDownload = './BejasVictor_Laboratorio 1.pdf'
+  const pdfDownload = './TFI2022-BejasVictor-Informe.pdf'
   return (
     <div className={styles.downloadpdf}>
       <a className={styles.download} download href={pdfDownload}>

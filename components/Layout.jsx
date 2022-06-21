@@ -6,14 +6,14 @@ import Footer from './Footer'
 export default function Layout ({
   children,
   title = 'TFI 2022',
-  description = 'Website Victor Bejas - Software Frontend Junior'
+  description = 'Website Victor Bejas'
 }) {
   return (
     <>
       <Head>
         <meta charSet='UTF-8' />
         <title>{title} | Victor Bejas</title>
-        <link rel='icon' href='/images/profile/Logo.webp' />
+        <link rel='icon' href='Logo.webp' />
         <meta name='description' content={description} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta httpEquiv='X-UA-Compatible' content='ie=edge' />

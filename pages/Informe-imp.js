@@ -1,6 +1,7 @@
 import Layout from 'components/Layout'
 import Section from 'components/Section'
 import Image from 'next/image'
+import ListOfCategories from 'components/ListOfCategories'
 import styles from 'styles/Informe-imp.module.css'
 
 import ilustration from 'public/ilustServidor.webp'
@@ -12,7 +13,11 @@ import mysqlSer from 'public/mysqlSer.webp'
 import nodeCli from 'public/nodeCli.webp'
 import gitSer from 'public/gitSer.webp'
 import gitCli from 'public/gitCli.webp'
-import ListOfCategories from 'components/ListOfCategories'
+import cloneApi from 'public/clone-api.webp'
+import tablasbd from 'public/tablas-bd.webp'
+import registrosbd from 'public/registros-bd.webp'
+import apiUp from 'public/api-up.webp'
+import nextUp from 'public/next-up.webp'
 
 export default function InformeImpl ({ categorias }) {
   const {nombre, procesador, memoria, almacenamiento} = categorias
@@ -22,7 +27,7 @@ export default function InformeImpl ({ categorias }) {
 
       <div className={styles.profileContainer}>
         <div className={styles.profilePicture}>
-          <Image src={ilustration} width={120} height={120} alt='imagen ilustrativa de virtualización' />
+          <Image src={ilustration} width={200} height={200} alt='imagen ilustrativa de virtualización' />
         </div>
       </div>
 
@@ -54,95 +59,52 @@ export default function InformeImpl ({ categorias }) {
               </p>
             </aside>
             <ListOfCategories categorias={categorias} />
-            {/* <table className={styles.table}>
-              <thead>
-                <tr className={styles.tr}>
-                  <th scope="col">Nombre Contenedor</th>
-                  <th scope="col">Servicio</th>
-                  <th scope="col">Especificación</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className={styles.tr}>
-                  <td className={styles.td}>40697516i</td>
-                  <td className={styles.td}>Cliente</td>
-                  <td className={styles.td}>
-                    <ul className={styles.listUl}>
-                      <li>Procesador: 1 CPU(1 core)</li>
-                      <li>Memoria: 512 MiB</li>
-                      <li>Almacenamiento: 10 GiB</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr className={styles.tr}>
-                  <td className={styles.td}>40697516db</td>
-                  <td className={styles.td}>Servidor</td>
-                  <td className={styles.td}>
-                    <ul className={styles.listUl}>
-                      <li>Procesador: 1 CPU(1 core)</li>
-                      <li>Memoria: 512 MiB</li>
-                      <li>Almacenamiento: 10 GiB</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table> */}
           </div>
 
-          {/* <ListOfCategories categorias={categorias} /> */}
-
           <div className={styles.contentDiv}>
+            <aside className={styles.contentAside}>
+              <p>
+                En cuanto a la categoría de red, ambos contenedores están obteniendo una dirección ip por dhcp. Para poder llevar a
+                cabo este proyecto, se necesita tener abierto un puerto, para poder acceder red vía pública. En la siguiente tabla
+                se detallan más aspectos sobre la categoría red a tener en cuenta:
+              </p>
+            </aside>
             <div className={styles.contentPicture}>
               <table className={styles.table}>
                 <thead>
                   <tr className={styles.tr}>
                     <th scope="col">Contenedores</th>
-                    <th scope="col">Pueros</th>
+                    <th scope="col">IP</th>
                     <th scope="col">Puertos Asignados</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className={styles.tr}>
                     <td className={styles.td}>40697516i</td>
-                    <td className={styles.td}>80, 443, 20</td>
+                    <td className={styles.td}>192.168.88.128:3000</td>
                     <td className={styles.td}>
                       <ul className={styles.listUl}>
                         <li>bejuca.hopto.org:11010</li>
-                        <li>bejuca.hopto.org:11011</li>
-                        <li>bejuca.hopto.org:11012</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr className={styles.tr}>
-                    <td className={styles.td}>40697516db</td>
-                    <td className={styles.td}>80, 443, 20</td>
-                    <td className={styles.td}>
-                      <ul className={styles.listUl}>
-                        <li>bejuca.hopto.org:11006</li>
-                        <li>bejuca.hopto.org:11007</li>
-                        <li>bejuca.hopto.org:11009</li>
                       </ul>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <aside className={styles.contentAside}>
-              <p>
-                En cuanto a la categoría de red, ambos contenedores están obteniendo una dirección ip por dhcp.
-                En la siguiente tabla se detallan más aspectos sobre la red a tener en cuenta:
-              </p>
-            </aside>
           </div>
 
           <div className={styles.contentDiv}>
-            <span className={styles.spanSubtitle}>Stack tecnológico utilizado para la implementación</span>
             <Image src={stack} alt='Stack tecnológico utilizado para la implementación' />
+            <span className={styles.spanSubtitle}>Stack tecnológico utilizado para la implementación</span>
           </div>
 
           <span className={styles.spanSubtitle}>Implementación</span>
 
           <div className={styles.contentDiv}>
+            <div>
+              <Image src={contCli} alt='contenedores para el cliente' />
+              <Image src={contSer} alt='contenedores para el servidor' />
+            </div>
             <aside className={styles.contentAside}>
               <p>
                 Para la implementación en primer lugar se crearon los contenedores en la plataforma Proxmox con los recursos
@@ -150,10 +112,6 @@ export default function InformeImpl ({ categorias }) {
                 Contenedores para el cliente y el servidor:
               </p>
             </aside>
-            <div>
-              <Image src={contCli} alt='contenedores para el cliente' />
-              <Image src={contSer} alt='contenedores para el servidor' />
-            </div>
           </div>
 
           <div className={styles.contentDiv}>
@@ -232,6 +190,73 @@ export default function InformeImpl ({ categorias }) {
               <Image src={gitSer} alt='instalación correcta de node en el cliente' />
               <Image src={gitCli} alt='instalación correcta de node en el cliente' />
             </div>
+          </div>
+
+          <div className={styles.contentDiv}>
+            <div>
+              <Image src={cloneApi} alt='clone api desde github' />
+              <Image src={tablasbd} alt='tablas creadas en la base de datos' />
+              <Image src={registrosbd} alt='registros de la base de datos' />
+            </div>
+            <aside className={styles.contentAside}>
+              <p>
+                El próximo paso es clonar en el contenedor 40697516db la API que se encuentra alojada en la plataforma GitHub,
+                para lo cual se utilizaron el siguiente comando:
+              </p>
+
+              <ul className={styles.listUl}>
+                <li>git clone https://github.com/vab1997/API-VIRT.gitt</li>
+              </ul>
+
+              <p>
+              Para poder crear la base de datos con las tablas correspondientes, tenemos que hacer uso de los siguientes comandos: 
+              </p>
+
+              <ul className={styles.listUl}>
+                <li>CREATE DATABASE database_tfi;</li>
+                <li>USE database_tfi;</li>
+              </ul>
+
+              <p>Con las tablas creadas, para ingresarle los registros, se utilizaron los siguientes comandos:</p>
+              <ul className={styles.listUl}>
+                <li>INSERT INTO datosalumno (id, nombre, apellido, legajo, asignatura, comision)
+                  VALUES (1, `Victor`, `Bejas`, `46255`, `Virtualizacion`, `5K3`);
+                </li>
+                <li>INSERT INTO categoria (id, nombre, servicio, procesador, memoria, almacenamiento)
+                  VALUES (1, `40697516db`, `Servidor`, `1 CPU (1 core)`, `512 MiB`, `10 GiB`);
+                </li>
+                <li>INSERT INTO categoria (id, nombre, servicio, procesador, memoria, almacenamiento)
+                  VALUES (2, `40697516i`, `Cliente`, `1 CPU (1 core)`, `512 MiB`, `10 GiB`);
+                </li>
+              </ul>
+            </aside>
+          </div>
+
+          <div className={styles.contentDiv}>
+            <aside className={styles.contentAside}>
+              <p>
+                Luego nos movemos a la carpeta donde se clonó el proyecto y ejecutamos el comando `npm install` para instalar
+                las dependencias necesarias para que la API pueda funcionar correctamente. Y por último para poder ejecutar la API,
+                con el comando `npm run start` queda operativa.
+              </p>
+            </aside>
+            <div>
+              <Image src={apiUp} alt='API levantada' />
+            </div>
+          </div>
+
+          <div className={styles.contentDiv}>
+            <div>
+              <Image src={nextUp} alt='API levantada' />
+            </div>
+            <aside className={styles.contentAside}>
+              <p>
+                De la misma forma en el contenedor 40697516i, para clonar el blog personal con el comando `git clone https://github.com/vab1997/blog-post-virt.git`,
+                y movernos a la carpeta del proyecto y ejecutar el comando `npm install` para instalar todas las dependencias necesarias.
+                Para levantar el proyecto, ejecutamos el comando ”npm run start” para poder visualizar el blog personal.
+              </p>
+
+            </aside>
           </div>
 
           <div className={styles.conclusiones}>
