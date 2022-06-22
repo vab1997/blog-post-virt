@@ -26,6 +26,7 @@ body {
 
 body {
   background-color: var(--app-background-color);
+  background-image: var(--app-background);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
   color: var(--text-base-color);
