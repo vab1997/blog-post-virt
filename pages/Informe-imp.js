@@ -94,8 +94,38 @@ export default function InformeImpl ({ categorias }) {
           </div>
 
           <div className={styles.contentDiv}>
-            <Image src={stack} alt='Stack tecnológico utilizado para la implementación' />
-            <span className={styles.spanSubtitle}>Stack tecnológico utilizado para la implementación</span>
+            <div>
+              <Image src={stack} alt='Stack tecnológico utilizado para la implementación' />
+            </div>
+            <aside className={styles.contentAside}>
+              <span className={styles.spanSubtitle}>Stack tecnológico utilizado para la implementación</span>
+
+              <p>Para desarrollar el BackEnd, las herramientas utilizadas fueron:</p>
+
+              <ul className={styles.listUl}>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Mysql</li>
+              </ul>
+
+              <p>Para el desarrollo del blog, las herramientas utilizadas fueron:</p>
+
+              <ul className={styles.listUl}>
+                <li>HTML y CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Next.js</li>
+              </ul>
+
+              <p>Las herramientas utilizadas para el desarrollo y el versionado del código:</p>
+
+              <ul className={styles.listUl}>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Visual Studio Code</li>
+              </ul>
+            </aside>
           </div>
 
           <span className={styles.spanSubtitle}>Implementación</span>
