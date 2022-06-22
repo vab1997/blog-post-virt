@@ -84,7 +84,7 @@ export default function InformeImpl ({ categorias }) {
                     <td className={styles.td}>192.168.88.128:3000</td>
                     <td className={styles.td}>
                       <ul className={styles.listUl}>
-                        <li>bejuca.hopto.org:11010</li>
+                        <li>bejuca.hopto.org:11015</li>
                       </ul>
                     </td>
                   </tr>
